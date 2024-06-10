@@ -34,6 +34,7 @@ map('n', '<S-l>', '<cmd>bnext<cr>', { desc = 'Next Buffer' })
 
 -- quit
 map('n', '<leader>qq', '<cmd>qa<cr>', { desc = 'Quit All' })
+map('n', '<leader>QQ', '<cmd>qa!<cr>', { desc = 'Force Quit All' })
 
 -- windows
 map('n', '<leader>ww', '<C-W>p', { desc = 'Other Window', remap = true })
@@ -43,7 +44,4 @@ map('n', '<leader>w|', '<C-W>v', { desc = 'Split Window Right', remap = true })
 map('n', '<leader>-', '<C-W>s', { desc = 'Split Window Below', remap = true })
 map('n', '<leader>|', '<C-W>v', { desc = 'Split Window Right', remap = true })
 
--- Neotree
-map({ 'i', 'x', 'n', 's' }, '<leader><tab>', function()
-  require('neo-tree.command').execute { toggle = true }
-end, { desc = 'Toggle NeoTree' })
+-- buffers
